@@ -1,14 +1,16 @@
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 3fr); /* Three columns */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Flexible columns with a minimum width */
     gap: 20px; /* Spacing between cards */
-    padding: 20px;
-    
+    padding: 15px; /* Padding around the grid */
+    margin: 0 auto; /* Center the grid */
+    max-width: 100%; /* Ensure it doesn't exceed screen width */
+    overflow: hidden; /* Prevent any overflow issues */
 }
 
 .product-card {
     background: #fff;
-    border: 1px solid #ddddddc3;
+    border: 1px solid rgba(221, 221, 221, 0.8);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -23,13 +25,15 @@
 
 .product-image {
     width: 100%;
-    height: 60%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 180px; /* Limit image height */
+    object-fit: cover; /* Ensure the image fits nicely */
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
 .product-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -38,17 +42,57 @@
     font-size: 0.9rem;
     color: #555;
     margin-bottom: 15px;
+    line-height: 1.4; /* Improve readability */
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .product-grid {
+        gap: 15px; /* Slightly smaller gaps on tablets */
+        padding: 10px; /* Reduce grid padding */
+    }
+
+    .product-card {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+}
+
 @media (max-width: 768px) {
     .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Slightly smaller min-width for cards */
+        gap: 12px; /* Smaller gaps for tighter spacing */
+        padding: 10px;
+    }
+
+    .product-card {
+        padding: 12px; /* Reduce padding for smaller screens */
+    }
+
+    .product-title {
+        font-size: 1.1rem; /* Adjust font size */
+    }
+
+    .product-description {
+        font-size: 0.85rem;
     }
 }
 
 @media (max-width: 480px) {
     .product-grid {
-        grid-template-columns: 1fr; /* Single column on very small screens */
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 10px; /* Minimal gaps */
+        padding: 8px;
+    }
+
+    .product-card {
+        padding: 10px; /* Compact padding */
+    }
+
+    .product-title {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .product-description {
+        font-size: 0.8rem;
     }
 }

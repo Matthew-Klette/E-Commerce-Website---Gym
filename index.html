@@ -161,17 +161,15 @@
         <div id="testimonialSlider" class="testimonial-slider"></div>
     </section>
 
-
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const hamburgerMenu = document.getElementById('hamburger-menu');
-            const navLinks = document.getElementById('nav-links');
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
 
-            hamburgerMenu.addEventListener('click', function () {
-                navLinks.classList.toggle('active');
-                hamburgerMenu.classList.toggle('active');
-            });
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburgerMenu.classList.toggle('active');
         });
+
     </script>
 
 
