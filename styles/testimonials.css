@@ -1,0 +1,29 @@
+.testimonials {
+    background-color: white;
+}
+
+.testimonial-slider {
+    max-width: 800px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    text-align: center;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: var(--primary-color);
+}

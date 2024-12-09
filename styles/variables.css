@@ -1,0 +1,15 @@
+:root {
+    --color-primary: #1a237e;
+    --color-secondary: #304ffe;
+    --color-accent: #ff3d00;
+    --color-accent-dark: #dd2c00;
+    --color-background: #f5f5f5;
+    --color-text: #212121;
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
